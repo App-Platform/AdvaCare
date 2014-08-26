@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>AdvaCare Clinics</title> 
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<meta name="KEYWORDS" content="AdvaCare, Clinic, AdvaCare Clinics, Bloomington, MN, Chiropractic, Physical Therapy, Medical, Accident" />
+<meta name="DESCRIPTION" content="Located in the heart of Bloomington, the leading health professionals in wellness, car accident injuries, injuries on the job, acute injuries, joint pain, and much more.  AdvaCare Clinics are dedicated to helping you achieve your wellness objectives — combining skills and expertise that span the entire wellness spectrum. As a patient at AdvaCare, you will have access to an integrated environment combining medical care, chiropractic, and physical therapy." />
+<meta content='True' name='HandheldFriendly' />
+<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="css/jquery.mobile.structure-1.3.0.min.css" />
+<link type="text/css" rel="stylesheet" href="css/custom-theme.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery-mobile-fluid960.min.css" />
+<link type="text/css" rel="stylesheet" href="css/colorbox.css" />
+<link type="text/css" rel="stylesheet" href="css/pwi.css" />
+<link type="text/css" rel="stylesheet" href="css/app-platform.css" />
+
+<!-- ADD SCRIPTS -->
+
+<!-- Add jQuery / Mobile -->
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/jquery.pwi.js"></script>
+<script type="text/javascript" src="js/app-platform.js"></script>
+
+<!-- Add PhoneGap -->
+<script type="text/javascript" src="phonegap.js"></script>
+
+
+<!-- Responsive iframe -->
+<style>
+iframe {max-width: 100%;}
+</style>
+
+<script>
+function adjustIframes() {
+    $('.responsiveIframe').each(function() {
+        var
+			$this = $(this),
+			proportion = $this.data('proportion'),
+			w = $this.attr('width'),
+			actual_w = $this.width();
+
+        if (!proportion) {
+            proportion = $this.attr('height') / w;
+            $this.data('proportion', proportion);
+        }
+
+        if (actual_w !== w) {
+            $this.css('height', Math.round(actual_w * proportion) + 'px');
+        }
+    });
+}
+$(window).on('resize load',adjustIframes);
+</script>
+<!-- /Responsive iframe -->
+</head> 
+
+<body>
+
+<!-- Home -->
+<div data-role="page" data-theme="a" id="home"> 
+    <div data-role="header" data-theme="a" class="center">
+        <img src="img/logo.png" class="img" style="padding: 10px 0;" alt="logo">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#first10" data-icon="alert">First 10</a></li>
+                <li><a href="#partners" data-icon="info">Partners</a></li>
+            </ul>
+        </div><!-- /navbar -->  
+</div><!-- /header -->
+     
+<div data-role="content">
+    
+    <!-- Help Popup-->
+    <div data-role="popup" id="help" data-overlay-theme="b" data-theme="a" style="max-width:500px;" class="ui-corner-all">
+        <div data-role="header" data-theme="a" class="center">
+            <img src="img/logo2.png">
+        </div>
+    
+        <div data-role="content" class="help">	
+            <h2>How does this work?</h2>
+            <p><strong>Send a referral</strong><br>
+            Tap the &quot;Email Referral&quot; button and enter the email address of the person you want to refer into the &quot;Referral Email&quot; field, enter your name into the &quot;Your Name&quot; field and if you would like to include any other information enter it into the &quot;Message&quot; field. Once you are done tap the &quot;Submit&quot; button and an email will be sent to the email address provided. An email alert will also be sent to 
+            <!---->AdvaCare Clinics for tracking purposes.</p>
+            <p><strong>Send this app</strong><br>
+            Tap the &quot;Send this app&quot; button and enter the email address of the person you want to send the app into the &quot;Email&quot; field and enter your name into the &quot;Your Name&quot; field. Once you are done tap the &quot;Submit&quot; button and an email will a link to the apps Landing Page be sent to the email address provided. An email alert will also be sent to 
+            <!---->AdvaCare Clinics for tracking purposes.</p>
+    		<p><strong>Get Your Own App</strong><br>
+   		    Tap the &quot;Get your own app!&quot; button and enter the email address of the person interested in getting more information about apps from App-Platform.net in the &quot;Email&quot; field. Once you are done tap the &quot;Submit&quot; button and a representative of App-Platform.net will be in touch.</p>
+        	<p><strong>Learn more</strong><br>
+            Go to <a target="_blank" onClick="window.open('http://app-platform.net', '_system', 'location=yes');">App-Platform.net</a> to learn more about this app and others.</p>
+        </div>
+        
+        <div data-role="footer" class="center">
+            <a href="#" data-role="button" data-inline="true" data-theme="a" data-rel="back" data-icon="delete" style="margin-top:10px; margin-bottom:10px;">Close Window</a>
+        </div>
+    </div><!-- /help popup -->
+    
+<div class="container_12">
+    <div class="grid_5 ui-block960-a">
+    
+        <h1 class="center"><a id="body" href="tel:952-835-6653">(952) 835-6653</a></h1>
+        
+        <p class="center">
+        <a id="body" href="#help" data-rel="popup" data-position-to="window" data-transition="pop">How does this work?</a><br />
+        </p>
+        
+        <!-- Email referral -->
+        <a id="emailRefBtn" href="" target="_blank" data-role="button" data-icon="email">Email Referral</a>
+        <form id="emailReferral" class="emailReferral" method="post" data-ajax="false" style="display:none; padding-left:10px; padding-right:10px; padding-bottom:20px;">
+        <div id="emailReferralSending" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="emailReferralOpen">
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Email">Referral Email</label>
+          <input type="text" name="Email" id="Email" value="" placeholder="Referral Email" class="required email" data-mini="true" />
+        </div>
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Name">Your Name</label>
+          <input type="text" name="Name" id="Name" value="" placeholder="Your Name" data-mini="true" class="required" />
+        </div>
+        <label for="Message"><span class="smallText">Message (optional)</span></label>
+        <textarea name="Message" id="Message" style="background:#ffffff;" data-mini="true"></textarea>
+        
+        <div data-role="controlgroup" data-type="horizontal" style="margin-left:-10px;">
+        <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />
+        <a href="#help" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" data-mini="true" data-icon="alert" data-theme="b">Help</a>
+        <a id="emailRefReset" href="" data-role="button" data-inline="true" data-mini="true" data-icon="delete" data-theme="b">Clear</a>
+        </div>
+        </div>
+        </form><!-- /email referral -->
+        
+        <!-- Send this app -->
+        <a id="sendAppBtn" href="" target="_blank" data-role="button" data-icon="email">Send this app</a>
+        <form id="sendApp" class="sendApp" method="post" data-ajax="false" style="display:none; padding-left:10px; padding-right:10px; padding-bottom:20px;">
+        <div id="sendAppSending" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="sendAppOpen">
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Email">Email</label>
+          <input type="text" name="Email" id="Email" value="" placeholder="Email" class="required email" data-mini="true" />
+        </div>
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="Name">Your Name</label>
+          <input type="text" name="Name" id="Name" value="" placeholder="Your Name" data-mini="true" class="required" />
+        </div>
+        
+        <div data-role="controlgroup" data-type="horizontal" style="margin-left:-10px;">
+        <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-icon="check" data-theme="b" />
+        <a href="#help" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" data-mini="true" data-icon="alert" data-theme="b">Help</a>
+        <a id="sendAppReset" href="" data-role="button" data-inline="true" data-mini="true" data-icon="delete" data-theme="b">Clear</a>
+        </div>
+        </div>
+        </form><!-- /send this app -->
+        
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.open('https://app.ecinity.com/apps/ecinity-toolbar/reviews/a7ab90e9-ec1b-4eb2-97e0-f825a8c7fcb6.html', '_system', 'location=yes');">Reviews</a>
+        <br />
+        
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.open('https://mine.hourmine.com/mobile/select?alias=advacarechiromn', '_system', 'location=yes');">Book an Appointment</a>
+        <a href="tel:952-835-6653" data-role="button" data-icon="phone">(952) 835-6653</a>
+        <a href="mailto:drdennis@advacaremn.com" target="_blank" data-icon="email" data-role="button">drdennis@advacaremn.com</a>
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.open('http://advacaremn.com/', '_system', 'location=yes');">www.advacaremn.com</a>
+        <a data-role="button" data-icon="info" target="_blank" onClick="window.open('http://advacaremn.com/blog/', '_system', 'location=yes');">Blog</a>
+        <p><strong>Location:</strong><br />
+        5001 American Blvd W. Suite 945<br />
+        Bloomington, MN 55437
+        </p>
+        <a data-role="button" data-icon="home" target="_blank" onClick="window.open('https://www.google.com/maps/place/5001+American+Blvd+W+%23945/@44.857511,-93.345774,17z/data=!3m1!4b1!4m2!3m1!1s0x87f6238ccde4e9ff:0xf79c542f64faf861', '_system', 'location=yes');">Map</a>
+        <br />
+	</div><!-- /block a -->   
+       
+    <div class="grid_7 ui-block960-b">
+    	<p><strong>Social Media</strong></p>
+        <a data-role="button" data-icon="facebook" target="_blank" onClick="window.open('https://www.facebook.com/advancedchiropracticbackandneck', '_system', 'location=yes');">facebook</a>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('https://twitter.com/advancedchiro', '_system', 'location=yes');">Twitter</a>
+        <a data-role="button" data-icon="linkedin" target="_blank" onClick="window.open('https://www.linkedin.com/profile/view?id=24295703', '_system', 'location=yes');">LinkedIn</a>
+        <br />
+        
+    	<p><strong>More Information</strong></p>
+        <a href="#services" data-role="button" data-icon="grid">Services</a>
+        <a href="#first10" data-role="button" data-icon="alert">First 10</a>
+        <br />
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>About Us</h2>        
+        <p>Located in the heart of Bloomington, the leading health professionals in wellness, car accident injuries, injuries on the job, acute injuries, joint pain, and much more.  AdvaCare Clinics are dedicated to helping you achieve your wellness objectives - combining skills and expertise that span the entire wellness spectrum. As a patient at AdvaCare, you will have access to an integrated environment combining medical care, chiropractic, and physical therapy.</p>
+		<p>AdvaCare Clinic has over 85 years combined medical treatment experience, trusted to provide you the care you need to get your health back. Progressive solutions with old-fashioned care; now combining physical therapy, medical, chiropractic, acupuncture, laser, preventive care, wellness and massage in a synergistic approach to healthcare.</p>
+        <iframe width="500" height="350" src="http://www.youtube.com/embed/Qkrz97KPeMc?rel=0&amp;autoplay=0&amp;controls=0&amp;modestbranding=1" frameborder="0" style="padding-left:10px;"></iframe>
+        <p>AdvaCare is an Outpatient Rehabilitation Facility Specializing in Chronic and Acute Pain Treatments, combining physical therapy, medical, chiropractic, acupuncture, laser, preventive care, wellness and massage in a synergistic approach to healthcare.</p>
+        <p>AdvaCare is multidisciplinary with each discipline bringing a unique knowledge and skill set to the rehabilitation process. The patient and his family members are vital members of the rehabilitation team and are integrated early into the rehabilitation process assisting with goal setting and other essential management strategies.</p>
+        <p>In addition to involving patients and family members in discussions about the goals of the rehabilitation program, the staff extends a wide variety of services to family members as well as patients, including psychological counseling and educational programs that can address all questions about rehabilitation.</p>
+        <p>Our dedication to providing expert and compassionate care can make an important difference in a patient's rehabilitation and change their outlook on the future. AdvaCare shows patients how they can achieve and maintain a level of improved functioning they may have not thought possible.</p>
+        <p>The care that you will receive is tailored to meet your needs and goals. You will feel confident knowing that you are getting real solutions, not just quick fixes.</p>
+        <p>In order to better serve you, the Advanced Chiropractic team incorporates a holistic approach to your health care needs. We will assess your needs structurally, nutritionally, and emotionally.</p>
+        <p>All this is done in a safe and peaceful environment where you can relax and heal.
+        </div>
+    	<div style="clear:both;"></div>
+        
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Featured Videos</h2> 
+        <p>Coming soon!</p>      
+		</div>
+        
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Reccomended Apps</h2>   
+        <p><strong>Stretching</strong></p>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.sportsmedstudio.stretchhd', '_system', 'location=yes');">Stretch HD</a>
+        <!-- iOS -->
+        <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=631014911&mt=8" rel="external" data-role="button" data-icon="ios" target="_blank">Stretch HD</a>
+        
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.taoufix.stretching', '_system', 'location=yes');">Stretching Flex</a>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=info.tom4sM.TakeBreakFree', '_system', 'location=yes');">Stretching &amp; eye exercises</a>
+        
+        <p><strong>Drugs</strong></p>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.ddinfoapp.diseasedrugsinformation', '_system', 'location=yes');">Disease and Drug Finder</a>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.drugsdictionary', '_system', 'location=yes');">Drug Dictionary</a>
+        
+        <p><strong>Nutrition</strong></p>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.guide.nutrition.health', '_system', 'location=yes');">Health and Nutrition Guide</a>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.open('market://details?id=com.glennbech.nutrinfo', '_system', 'location=yes');">Food, Calories and Nutrition</a>
+        
+		</div>
+                
+	</div><!-- /block b -->       
+</div><!-- /container -->     
+</div><!-- /content -->
+    
+<div data-role="footer" data-theme="a">
+    <div class="footerText">
+    	<br />
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn" href="" target="_blank" data-role="button" data-theme="b" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp" class="getYourOwnApp" method="post" data-ajax="false" style="display:none;">
+        <div id="getYourOwnAppSending" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="getYourOwnAppOpen" style="margin-left:auto; margin-right:auto; max-width:250px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" data-mini="true" value="" placeholder="Email" class="required email" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-theme="b" data-icon="check" />
+            <a id="getYourOwnAppReset" href="" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+        <p><script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " AdvaCare Clinics");
+        </script></p>
+   </div>
+</div><!-- /footer -->
+</div><!-- /home -->
+
+
+
+<!-- Services -->
+<div data-role="page" data-theme="a" id="services"> 
+    <div data-role="header" data-theme="a" class="center">
+        <img src="img/logo.png" class="img" style="padding: 10px 0;" alt="logo">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#first10" data-icon="alert">First 10</a></li>
+                <li><a href="#partners" data-icon="info">Partners</a></li>
+            </ul>
+        </div><!-- /navbar -->  
+</div><!-- /header -->
+     
+<div data-role="content">
+        <h1>Services</h1>
+<div class="container_12">
+    <div class="grid_4 ui-block960-a">
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Chiropractic</h2>        
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/attention-deficit-hyperactivity-disorder-adhd/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">ADHD</a>
+        <a onClick="window.open('', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">ADHD</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/allergies/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Allergies</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/arthritis/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Arthritis</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/auto-accidents/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Auto Accidents</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/back-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Back Pain</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/carpal-tunnel/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Carpal Tunnel</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/fibromyalgia/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Fibromyalgia</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/frozen-shoulder/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Frozen Shoulder</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/headaches/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Headaches</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/neck-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">ANeck PainDHD</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/personal-injury/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Personal Injury</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/plantar-fasciitis/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Plantar Fasciitis</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/premenstrual-syndrome-pms/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">PMS</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/pregnancy/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Pregnancy</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/scoliosis/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Scoliosis</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/slipped-discs/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Slipped Discs</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/sports-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Sports Injuries</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/stress/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Stress</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/temporomandibular-joint-disorders-tmj/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">TMJ</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/whiplash/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Whiplash</a>
+        <a onClick="window.open('http://advacaremn.com/chiropractic-conditions-we-treat/work-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Work Injuries</a>
+        </div>
+	</div><!-- /block a -->   
+       
+    <div class="grid_4 ui-block960-b">
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Physical Therapy</h2>        
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/osteoarthritis-rheumatoid-arthritis/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Arthritis Pain</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/auto-accident-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Auto Injuries</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/chronic-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Chronic Pain</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/herniated-discs-compressed-discs/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Disc Issues</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/fibromyalgia/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Fibromyalgia</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/posture-issues/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Posture Issues</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/pre-post-surgical-care/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Pre/Post Surgical</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/soft-tissue-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Soft Tissue Injuries</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/spinal-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Spinal Injuries</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/sports-related-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Sports Related Injuries</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/temporomandibular-joint-disorder/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">TMJ Disorder</a>
+        <a onClick="window.open('http://advacaremn.com/conditions-we-treat-with-physical-therapy/workers-compensation-injuries/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Worker's Comp Injuries</a>
+        </div>
+	</div><!-- /block b --> 
+    
+    <div class="grid_4 ui-block960-c">
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Medical</h2>        
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/acute-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Acute Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/arthritis-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Arthritis Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/back-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Back Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/common-cysts/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Common Cysts</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/disc-problems/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Disc Problems</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/headaches/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Headaches</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/hemorrhoids/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Hemorrhoids</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/joint-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Joint Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/neck-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Neck Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/neuropathic-pain/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Neuropathic Pain</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/sciatica/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Sciatica</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/tremors/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Tremors</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/weight-issues-obesity/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Weight Issues / Obesity</a>
+        <a onClick="window.open('http://advacaremn.com/medical-conditions-we-treat/wrinkles/', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Wrinkles</a>
+        </div>
+	</div><!-- /block c --> 
+    <div style="padding:20px; float:left;">
+    <p class="smallText"><strong>Note:</strong> Each service button will open a new browser window, to return to this page use the "back" button or "multitask" button to return to this app.</p>
+    </div>
+    <div style="margin-bottom:50px;">&nbsp;</div>
+</div><!-- /container -->     
+</div><!-- /content -->
+    
+<div data-role="footer" data-theme="a">
+    <div class="footerText">
+    	<br />
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn2" href="" target="_blank" data-role="button" data-theme="b" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp2" class="getYourOwnApp" method="post" data-ajax="false" style="display:none;">
+        <div id="getYourOwnAppSending2" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="getYourOwnAppOpen2" style="margin-left:auto; margin-right:auto; max-width:250px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" data-mini="true" value="" placeholder="Email" class="required email" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-theme="b" data-icon="check" />
+            <a id="getYourOwnAppReset2" href="" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+        <p><script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " AdvaCare Clinics");
+        </script></p>
+   </div>
+</div><!-- /footer -->
+</div><!-- /services -->
+
+
+
+<!-- First 10 -->
+<div data-role="page" data-theme="a" id="first10"> 
+    <div data-role="header" data-theme="a" class="center">
+        <img src="img/logo.png" class="img" style="padding: 10px 0;" alt="logo">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#first10" data-icon="alert">First 10</a></li>
+                <li><a href="#partners" data-icon="info">Partners</a></li>
+            </ul>
+        </div><!-- /navbar -->  
+</div><!-- /header -->
+     
+<div data-role="content">
+        <h1>First 10</h1>
+        <p>If you are in a car accident here is what to do in the...</p>
+<div class="container_12">
+    <div class="grid_6 ui-block960-a">
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>First Ten Minutes</h2> 
+        	<p>First 10 Minutes after a car accident:</p>
+            <ul>
+            <li>Stay calm - assess passengers</li>
+            <li><strong>Call 9-1-1 immediately if injuries or severe vehicle damage</strong></li>
+            <li>Move out of traffic IF it's safe</li>
+            <li>Turn hazard lights on</li>
+            <li>Call police - stay until they arrive</li>
+            <li>Be polite - don't admit fault, give <em><strong>only</strong></em> facts to the police</li>
+            <li>Take pictures if safe (use cell camera), take notes</li>
+            <li><strong>Exchange: name, address, phone, license plate, driver's license, insurance</strong></li>
+            <li>Ask witnesses for names, phone numbers, addresses</li>
+            </ul>
+		</div>
+        
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>First Ten Hours</h2> 
+        	<p>First 10 hours after a car accident:</p>
+            <ul>
+            <li>Secure vehicle - remove valuables</li>
+            <li>See AdvaCare Clinics ASAP, even if injuries seem minor</li>
+            <li>Record weather, time, location, statements made, etc.</li>
+            <li>File accident report as required by state law</li>
+            <li>Contact insurance agent</li>
+            <li>Revisit accident scene - photograph anything important</li>
+            <li>Photograph visible injuries</li>
+            <li>Obtain police report when available</li>
+            <li>Get repair estimates for your car</li>
+            <li>Contact employer if you can't work</li>
+            </ul>
+		</div>
+	</div><!-- /block a -->   
+       
+    <div class="grid_6 ui-block960-b">
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>First Ten Days</h2> 
+        	<p>First 10 days after a car accident:</p>
+            <ul>
+            <li>See AdvaCare Clinics ASAP, even if injuries seem minor, soft tissue injuries can go unnoticed for months, after 12 weeks permanent damage can set in causing chronic pain</li>
+            <li>Get a spinal stress test to check for joint, ligament, or soft tissue injury, even with lack of pain or severe pain</li>
+            </ul>
+		</div>
+        
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Contact an Attorney</h2> 
+        	<p>When to contact an attorney:</p>
+            <ul>
+            <li>If injured and/or extensive vehicle damage</li>
+            <li>Before talking to another driver's insurance company</li>
+            <li>If you are being pressured into a quick settlement</li>
+            <li>Before the time period for filing a claim expires</li>
+            </ul>
+            <p><strong>Ask about our list of trusted attorneys</strong></p>
+            <a href="tel:952-835-6653" data-role="button" data-icon="phone">(952) 835-6653</a>
+		</div>
+	</div><!-- /block b -->
+    
+</div><!-- /container --> 
+
+<div class="container_12">
+    <div class="grid_6 ui-block960-c">
+    <a onClick="window.open('http://advacare.app-platform.net/rsrc/AccidentWorksheet.pdf', '_system', 'location=yes');" data-role="button" data-icon="info" target="_blank">Accident Worksheet (PDF)</a>
+	</div><!-- /block c -->
+</div><!-- /container --> 
+
+    <div style="margin-bottom:50px;">&nbsp;</div>
+
+</div><!-- /content -->
+    
+<div data-role="footer" data-theme="a">
+    <div class="footerText">
+    	<br />
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn3" href="" target="_blank" data-role="button" data-theme="b" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp3" class="getYourOwnApp" method="post" data-ajax="false" style="display:none;">
+        <div id="getYourOwnAppSending3" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="getYourOwnAppOpen3" style="margin-left:auto; margin-right:auto; max-width:250px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" data-mini="true" value="" placeholder="Email" class="required email" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-theme="b" data-icon="check" />
+            <a id="getYourOwnAppReset3" href="" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+        <p><script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " AdvaCare Clinics");
+        </script></p>
+   </div>
+</div><!-- /footer -->
+</div><!-- /First 10 -->
+
+
+
+<!-- Partners -->
+<div data-role="page" data-theme="a" id="partners"> 
+    <div data-role="header" data-theme="a" class="center">
+        <img src="img/logo.png" class="img" style="padding: 10px 0;" alt="logo">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#first10" data-icon="alert">First 10</a></li>
+                <li><a href="#partners" data-icon="info">Partners</a></li>
+            </ul>
+        </div><!-- /navbar -->  
+</div><!-- /header -->
+     
+<div data-role="content">
+        <h1>Partners</h1>
+<div class="container_12">
+    <div class="grid_5 ui-block960-a">
+    	<p>Coming soon!</p>
+	</div><!-- /block a -->   
+       
+    <div class="grid_7 ui-block960-b">
+                
+	</div><!-- /block b --> 
+    <div style="margin-bottom:50px;">&nbsp;</div>
+</div><!-- /container -->     
+</div><!-- /content -->
+    
+<div data-role="footer" data-theme="a">
+    <div class="footerText">
+    	<br />
+        <!-- Get your own app -->
+        <a id="getYourOwnAppBtn4" href="" target="_blank" data-role="button" data-theme="b" data-inline="true" data-icon="email">Get your own app!</a>
+        <form id="getYourOwnApp4" class="getYourOwnApp" method="post" data-ajax="false" style="display:none;">
+        <div id="getYourOwnAppSending4" style="display:none;">
+            <h2>Sending...</h2>
+            <small>This may take a few moments depending on your data connection.</small>
+        </div>
+        <div id="getYourOwnAppOpen" style="margin-left:auto; margin-right:auto; max-width:250px; margin-top:-10px;">
+            <div data-role="fieldcontain" class="ui-hide-label">
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email" data-mini="true" value="" placeholder="Email" class="required email" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+            <input type="submit" id="post_submit" name="submit" value="Submit" class="submit-value" data-inline="true" data-mini="true" data-theme="b" data-icon="check" />
+            <a id="getYourOwnAppReset4" href="" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Clear</a>
+            </div>
+        </div>
+        </form><!-- /get your own app -->
+        <div style="clear:both"></div>
+        <p><script type="text/javascript"> 
+            copyright=new Date(); update=copyright.getFullYear(); document.write("Copyright &copy; "+ update + " AdvaCare Clinics");
+        </script></p>
+   </div>
+</div><!-- /footer -->
+</div><!-- /Partners -->
+
+<!-- Bump Headers -->
+<script>
+$(".grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12").find("p").css("margin-left", "10px");
+</script>
+
+<!-- Email Referral Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#emailReferral" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#emailReferralOpen").fadeOut();
+				$("#emailReferralSending").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://advacare.app-platform.net/php/emailReferral.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#emailReferralOpen").fadeIn();
+					$("#emailReferralSending").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+</script>
+
+<!-- Send App Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#sendApp" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#sendAppOpen").fadeOut();
+				$("#sendAppSending").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://advacare.app-platform.net/php/sendApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#sendAppOpen").fadeIn();
+					$("#sendAppSending").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+</script>
+
+<!-- Get Your Own App Validation -->
+<script type="text/javascript">
+$(function() {
+    $( "#getYourOwnApp" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#getYourOwnAppOpen").fadeOut();
+				$("#getYourOwnAppSending").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://advacare.app-platform.net/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#getYourOwnAppOpen").fadeIn();
+					$("#getYourOwnAppSending").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+}); 
+
+$(function() {
+    $( "#getYourOwnApp2" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#getYourOwnAppOpen2").fadeOut();
+				$("#getYourOwnAppSending2").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://app-platform.net/test/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#getYourOwnAppOpen2").fadeIn();
+					$("#getYourOwnAppSending2").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+
+$(function() {
+    $( "#getYourOwnApp3" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#getYourOwnAppOpen3").fadeOut();
+				$("#getYourOwnAppSending3").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://app-platform.net/test/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#getYourOwnAppOpen3").fadeIn();
+					$("#getYourOwnAppSending3").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+
+$(function() {
+    $( "#getYourOwnApp4" ).validate({
+        submitHandler: function(form) {
+           var data= $(form).serialize()
+				$("#getYourOwnAppOpen4").fadeOut();
+				$("#getYourOwnAppSending4").fadeIn('slow');
+                $.ajax({
+                type: "POST",
+                url: "http://app-platform.net/test/php/getYourOwnApp.php",
+                data: data,
+                success: function(){
+                    $(form).fadeOut();
+					$("#getYourOwnAppOpen4").fadeIn();
+					$("#getYourOwnAppSending4").fadeOut();
+                }
+                });
+            return false;
+        }
+    });
+});     
+    
+</script>
+
+<script>
+<!-- Email referral button -->
+$(function() {$("#emailRefBtn").toggle(function(){$("#emailReferral").show();},function(){$("#emailReferral").hide(); $("#emailReferral")[0].reset();});});
+$(function() {$('#emailRefReset').click( function() { $("#emailReferral")[0].reset(); });});
+
+<!-- Send App button -->
+$(function() {$("#sendAppBtn").toggle(function(){$("#sendApp").show();},function(){$("#sendApp").hide(); $("#sendApp")[0].reset();});});
+$(function() {$('#sendAppReset').click( function() { $("#sendApp")[0].reset(); });});
+
+<!-- Get Your Own App button -->
+$(function() {$("#getYourOwnAppBtn").toggle(function(){$("#getYourOwnApp").show();},function(){$("#getYourOwnApp").hide(); $("#getYourOwnApp")[0].reset();});});
+$(function() {$('#getYourOwnAppReset').click( function() { $("#getYourOwnApp")[0].reset(); });});
+
+$(function() {$("#getYourOwnAppBtn2").toggle(function(){$("#getYourOwnApp2").show();},function(){$("#getYourOwnApp2").hide(); $("#getYourOwnApp2")[0].reset();});});
+$(function() {$('#getYourOwnAppReset2').click( function() { $("#getYourOwnApp2")[0].reset(); });});
+
+$(function() {$("#getYourOwnAppBtn3").toggle(function(){$("#getYourOwnApp3").show();},function(){$("#getYourOwnApp3").hide(); $("#getYourOwnApp3")[0].reset();});});
+$(function() {$('#getYourOwnAppReset3').click( function() { $("#getYourOwnApp3")[0].reset(); });});
+
+$(function() {$("#getYourOwnAppBtn4").toggle(function(){$("#getYourOwnApp4").show();},function(){$("#getYourOwnApp4").hide(); $("#getYourOwnApp4")[0].reset();});});
+$(function() {$('#getYourOwnAppReset4').click( function() { $("#getYourOwnApp4")[0].reset(); });});
+</script>
+
+</body>
+</html>
